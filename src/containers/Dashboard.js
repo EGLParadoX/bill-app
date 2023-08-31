@@ -72,6 +72,8 @@ export default class {
     this.document = document
     this.onNavigate = onNavigate
     this.store = store
+    this.bills = bills
+    this.localStorage = localStorage
     $('#arrow-icon1').click((e) => this.handleShowTickets(e, bills, 1))
     $('#arrow-icon2').click((e) => this.handleShowTickets(e, bills, 2))
     $('#arrow-icon3').click((e) => this.handleShowTickets(e, bills, 3))
@@ -86,6 +88,7 @@ export default class {
   }
 
   handleEditTicket(e, bill, bills) {
+    console.log('cliqué')
     if (this.counter === undefined || this.id !== bill.id) this.counter = 0
     if (this.id === undefined || this.id !== bill.id) this.id = bill.id
     if (this.counter % 2 === 0) {
@@ -105,6 +108,7 @@ export default class {
       $('.vertical-navbar').css({ height: '120vh' })
       this.counter ++
     }
+    console.log(this.counter)
     $('#icon-eye-d').click(this.handleClickIconEye)
     $('#btn-accept-bill').click((e) => this.handleAcceptSubmit(e, bill))
     $('#btn-refuse-bill').click((e) => this.handleRefuseSubmit(e, bill))
@@ -145,9 +149,10 @@ export default class {
       this.counter ++
     }
 
-    bills.forEach(bill => {
-      $(`#open-bill${bill.id}`).click((e) => this.handleEditTicket(e, bill, bills))
-    })
+    for (let i = 0; i < bills.length; i++) {
+      const bill = bills[i];
+      $(`#open-bill${bill.id}`).off('click').click((e) => this.handleEditTicket(e, bill, bills));
+    }
 
     return bills
 
