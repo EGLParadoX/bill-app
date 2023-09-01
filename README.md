@@ -74,7 +74,7 @@ Si vous êtes curieux, voici les ingrédients techniques que j'ai utilisés :
 - HTML et CSS : Les bases pour construire et styliser l'interface utilisateur. <img src="https://img.shields.io/badge/-HTML-black?style=flat&logo=html5" alt="HTML"> <img src="https://img.shields.io/badge/-CSS-black?style=flat&logo=css3" alt="CSS">
 
 
-Si vous voulez explorer davantage, jetez un coup d'œil au Billed-App-FR-back. C'est la partie cachée qui gère tout le côté technique.
+Si vous voulez explorer davantage, jetez un coup d'œil au [Billed-App-FR-back](https://github.com/OpenClassrooms-Student-Center/Billed-app-FR-back). C'est la partie cachée qui gère tout le côté technique.
 
 
 
