@@ -6,7 +6,7 @@
 
 #### Mon Approche
 
-Eh bien, durant mon périple avec Billed-App-Front, j'ai rencontré quelques embûches techniques. L'une d'elles concernait un test de connexion où les choses ne se déroulaient pas comme prévu. J'ai plongé dans le code et devine quoi ? J'ai découvert qu'une référence à un identifiant (ou "id" pour les initiés) était légèrement décalée. Après avoir corrigé cette référence, le test s'est finalement comporté comme il fallait.
+Eh bien, durant mon périple avec billapp, j'ai rencontré quelques embûches techniques. L'une d'elles concernait un test de connexion où les choses ne se déroulaient pas comme prévu. J'ai plongé dans le code et devine quoi ? J'ai découvert qu'une référence à un identifiant (ou "id" pour les initiés) était légèrement décalée. Après avoir corrigé cette référence, le test s'est finalement comporté comme il fallait.
 
 ### Problème 2 : Gestion des Justificatifs ✅
 
