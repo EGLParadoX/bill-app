@@ -69,13 +69,13 @@ Continuer à optimiser et mettre à jour le code pour offrir une expérience uti
 ### Système Utilisé et Liens Pertinents
 Si vous êtes curieux, voici les ingrédients techniques que j'ai utilisés :
 
-- Node.js : Pour exécuter le code JavaScript côté serveur.
-- JavaScript : Le langage de programmation côté client.
-- HTML et CSS : Les bases pour construire et styliser l'interface utilisateur.
+- Node.js : Pour exécuter le code JavaScript côté serveur. <img src="https://img.shields.io/badge/-Node.js-black?style=flat&logo=node.js" alt="Node.js">
+- JavaScript : Le langage de programmation côté client. <img src="https://img.shields.io/badge/-JavaScript-black?style=flat&logo=javascript" alt="JavaScript">
+- HTML et CSS : Les bases pour construire et styliser l'interface utilisateur. <img src="https://img.shields.io/badge/-HTML-black?style=flat&logo=html5" alt="HTML"> <img src="https://img.shields.io/badge/-CSS-black?style=flat&logo=css3" alt="CSS">
 Si vous voulez explorer davantage, jetez un coup d'œil au Billed-App-FR-back. C'est la partie cachée qui gère tout le côté technique.
 
-<img src="https://img.shields.io/badge/-JavaScript-black?style=flat&logo=javascript" alt="JavaScript">
-<img src="https://img.shields.io/badge/-Node.js-black?style=flat&logo=node.js" alt="Node.js">
-<img src="https://img.shields.io/badge/-HTML-black?style=flat&logo=html5" alt="HTML">
-<img src="https://img.shields.io/badge/-CSS-black?style=flat&logo=css3" alt="CSS">
+
+
+
+
 
