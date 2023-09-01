@@ -39,12 +39,11 @@ if (!formatsAutorises.includes(nomFichier.split('.').pop().toLowerCase())) {
 En somme, ce bout de code commence par vérifier si un fichier est sélectionné. Sinon, il affiche un message d'erreur. Ensuite, il examine si l'extension du fichier se trouve dans la liste des extensions autorisées. Si ce n'est pas le cas, il vide le champ de sélection et affiche un autre message d'erreur.
 
 ### Problème 3 : Gestion des Tickets ✅
+#### Résolution de Problème : Désamorcer les Sélections de Tickets en Double
+Laisse-moi te raconter une situation intrigante dans l'univers de la gestion des tickets côté super-admin RH de Billed-App-Front. J'ai repéré un problème déconcertant : après avoir choisi un ticket dans une liste, comme celle des "validés", puis avoir navigué vers une autre liste, disons les "refusés", retourner à la première liste m'empêchait curieusement de sélectionner à nouveau un ticket. Vraiment casse-tête, je te dis.
 
-#### Mon Approche
-
-Voici une autre histoire intéressante : la gestion des tickets en mode super-admin RH. J'ai remarqué qu'une fois que je choisissais un ticket dans une liste (par exemple "validé") et que je passais à une autre liste (par exemple "refusé"), je ne pouvais plus choisir de ticket dans la première liste. C'était un vrai casse-tête.
-
-Pour résoudre ce dilemme, j'ai utilisé une petite astuce appelée "off". En désactivant certains écouteurs d'événements répétitifs, j'ai réussi à éviter les problèmes de sélection de tickets. Voici comment cela a fonctionné :
+#### L'Art de la Solution : .off à la Rescousse
+C'est là que l'astuce .off entre en jeu, et elle est loin d'être anodine ! En utilisant cette fonctionnalité puissante de jQuery, j'ai réussi à résoudre ce problème en désamorçant les écouteurs d'événements redondants. Permet-moi de t'éclairer davantage sur cette technique salvatrice :
 
 ```javascript
 for (let i = 0; i < bills.length; i++) {
@@ -52,9 +51,9 @@ for (let i = 0; i < bills.length; i++) {
   $(`#open-bill${bill.id}`).off('click').click((e) => this.handleEditTicket(e, bill, bills));
 }
 ```
+En gros, ce bout de code fait un boulot génial. Il dit aux écouteurs d'événements de prendre une pause. C'est comme si on disait : "Hé, les gars, pas besoin de faire la même chose en boucle, ok ?". Cette pause permet d'éviter toute confusion quand je veux choisir des tickets.
 
-Tout ce code fait, c'est de désactiver les clics en trop pour éviter les doublons, puis d'ajouter de nouveaux clics qui appellent la fonction "handleEditTicket" avec les bons paramètres.
-
+C'est simple, l'astuce .off élimine ces clics excessifs en évitant les doublons, pour ensuite introduire des clics ciblés qui déclenchent la fonction "handleEditTicket" avec les informations nécessaires.
 ### Débuggage avec Console.log et Inspecteur Google 🐞
 Lorsque je traquais ces problèmes, mes outils préférés étaient mes fidèles consoles.log et consoles.error. Je les plaçais partout dans le code pour suivre les étapes du processus. C'était un peu comme un GPS pour naviguer dans le code.
 
