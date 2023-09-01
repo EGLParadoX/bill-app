@@ -1,6 +1,6 @@
-# Solutions Techniques pour Billed-App-Front
+# Solutions Techniques pour Billed-App
 
-## Mon Aventure avec Billed-App-Front : Comment J'ai Surmonté les Problèmes
+## Mon Aventure avec Billed-App : Comment J'ai Surmonté les Problèmes
 
 ### Problème 1 : Test de Connexion ✅
 
@@ -61,7 +61,7 @@ Lorsque je traquais ces problèmes, mes outils préférés étaient mes fidèles
 L'inspecteur Google m'a aussi rendu de précieux services. Grâce aux outils de développement du navigateur, j'ai pu surveiller les événements en temps réel, observer les requêtes réseau et effectuer des ajustements au JavaScript en direct. Cela m'a grandement aidé à repérer et résoudre les problèmes.
 
 ### Prochaine Étape : Plus de Tests et des Mises à Jour 🚀
-Après avoir consacré du temps à Billed-App-Front et résolu plusieurs énigmes techniques, il me reste encore quelques étapes pour consolider davantage l'application :
+Après avoir consacré du temps à Bill-App et résolu plusieurs énigmes techniques, il me reste encore quelques étapes pour consolider davantage l'application :
 
 Ajouter des tests pour garantir le bon fonctionnement des fonctionnalités existantes.
 Mettre en place des tests E2E pour simuler les parcours utilisateur et assurer une connexion fluide.
