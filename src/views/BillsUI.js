@@ -19,10 +19,30 @@ const row = (bill) => {
     `)
   }
 
-const rows = (data) => {
-  const sortedBills = data && data.length ? [...data].sort((a, b) => b.date.localeCompare(a.date)) : [];
-  return sortedBills.map(bill => row(bill)).join("");
-}
+  const rows = (data) => {
+    const monthMap = {
+      'Jan': 'Janv', 'Feb': 'Fév', 'Mar': 'Mar.', 'Apr': 'Avr',
+      'May': 'Mai', 'Jun': 'Juin', 'Jul': 'Juil.', 'Aug': 'Août',
+      'Sep': 'Sep', 'Oct': 'Oct', 'Nov': 'Nov', 'Dec': 'Déc'
+    };
+  
+    const sortedBills = data && data.length ? [...data].sort((a, b) => {
+      const convertToEnglish = (dateString) => {
+        for (const frenchmonth in monthMap) {
+          if (monthMap.hasOwnProperty(frenchmonth)) {
+            dateString = dateString.replace(monthMap[frenchmonth], frenchmonth);
+          }
+        }
+        return dateString;
+      };
+      const dateA = new Date(convertToEnglish(a.date));
+      const dateB = new Date(convertToEnglish(b.date));
+  
+      return dateB - dateA;
+    }) : [];
+    return sortedBills.map(bill => row(bill)).join("");
+  }
+  
 
 export default ({ data: bills, loading, error }) => {
   
