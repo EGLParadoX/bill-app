@@ -16,28 +16,26 @@ export default class NewBill {
     new Logout({ document, localStorage, onNavigate })
   }
 
+
   handleChangeFile = e => {
-    e.preventDefault();
-  
-    const allowedFileFormat = ['jpeg', 'jpg', 'png'];
+    const allowedFileFormats = ['jpeg', 'jpg', 'png'];
     const fileInput = document.querySelector(`input[data-testid="file"]`);
     const file = fileInput.files[0];
     const filePath = e.target.value.split(/\\/g);
-  
+    
     if (!file) {
-      console.error("No file selected.");
       return;
     }
-  
+    
     const fileName = filePath[filePath.length - 1];
-  
-    if (!allowedFileFormat.includes(fileName.split('.').pop().toLowerCase())) {
-      fileInput.value = "";
-      console.error("Invalid file format. Allowed formats are jpeg, jpg and png");
-      return;
+    const fileExtension = fileName.split('.').pop().toLowerCase();
+    
+    if (!allowedFileFormats.includes(fileExtension)) {
+      e.preventDefault(); 
+      fileInput.value = ""; 
     }
   }
-
+  
   handleSubmit = e => {
     e.preventDefault()
     console.log('e.target.querySelector(`input[data-testid="datepicker"]`).value', e.target.querySelector(`input[data-testid="datepicker"]`).value)
